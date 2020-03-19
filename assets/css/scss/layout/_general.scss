@@ -1,0 +1,104 @@
+
+	/* general */
+
+html{
+	background-color: #A8AF9F;
+}
+
+body{
+	font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif, gothic;
+	width: 100%;
+	
+	#wrap {
+	overflow: hidden;
+	}
+
+	h1{
+		font-size: 30px;
+		@include sp{
+			font-size: 20px;
+
+		}
+	}
+	p{
+		font-size: 16px;
+		line-height: 32px;
+		@include sp{
+			font-size: 14px;
+			line-height: 28px;
+		}
+	}
+
+	.jp{
+		display: inline;
+	}
+
+	.en{
+		display: none;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	.shadow{
+		filter: drop-shadow(3px 3px 1px rgba(0,0,0,1));
+	}
+	.border{
+		border: solid 1px #000;
+	}
+	.white{
+		color: #fff;
+	}
+	.accent_letter{
+		font-size: 10px;
+	}
+
+}
+
+#loading{
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	position: fixed;
+	z-index: 999;
+
+	animation: fadeOut 1s steps(3);
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+	img{
+		width: 10%;
+		height: auto;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@include tab{
+			width: 20%;	
+		}
+		@include sp{
+			width: 40%;	
+		}
+	}
+
+}
+
+
+wrap{
+	display: none;
+}
+
+
+.loading_fadeOut{
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

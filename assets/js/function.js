@@ -43,7 +43,7 @@ function houseSwitch() {
     }
 
      houseBg = 'url(assets/images/img_house_bg_0' + index + '.png)'
-    document.getElementById('sec_house').style.backgroundImage = houseBg;
+    document.getElementById('house_location_map').style.backgroundImage = houseBg;
   };
 };
 
@@ -93,19 +93,11 @@ const WindowWidth = window.outerWidth;
 
 let logoHoverOver = () => {
   if(WindowWidth > 768){
-    headerSymbol.style.width = '4vw';
+    headerSymbol.style.width = '3.5vw';
     headerLogotype.style.display = 'none';
-    headerBgBlue.style.width = '100vw';
-    headerBgBlue.style.left = '0';
-    headerBgWhite.style.width = '100vw';
-    headerBgWhite.style.left = '0';
   } else if(WindowWidth <= 768 && 480 < WindowWidth){
     headerSymbol.style.width = '8vw';
     headerLogotype.style.display = 'none';
-    headerBgBlue.style.width = '100vw';
-    headerBgBlue.style.left = '0';
-    headerBgWhite.style.width = '100vw';
-    headerBgWhite.style.left = '0';
   } else{
     headerSymbol.style.width = '16vw';
     headerLogotype.style.display = 'none';
@@ -116,17 +108,9 @@ let logoHoverLeave = () => {
   if(WindowWidth > 768){
     headerSymbol.style.width = '3vw';
     headerLogotype.style.display = 'inline';
-    headerBgBlue.style.width = '8vw';
-    headerBgBlue.style.left = '3vw';
-    headerBgWhite.style.width = '8vw';
-    headerBgWhite.style.left = '3vw';
   } else if(WindowWidth <= 768 && 480 < WindowWidth){
     headerSymbol.style.width = '6vw';
     headerLogotype.style.display = 'inline';
-    headerBgBlue.style.width = '18vw';
-    headerBgBlue.style.left = '4vw';
-    headerBgWhite.style.width = '18vw';
-    headerBgWhite.style.left = '4vw';
   } else{
     headerSymbol.style.width = '12vw';
     headerLogotype.style.display = 'inline';

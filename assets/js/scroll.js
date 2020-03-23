@@ -1,44 +1,4 @@
 
-
-
-// const paper = document.getElementById('paper_test');
-// let hieghtNow = window.getComputedStyle(paper, null).getPropertyValue('top');
-
-// let paraTest = () => {
-// 	let scroll = document.documentElement.scrollTop;
-// 	now = paper.style.top = parseInt(hieghtNow) + scroll/10 + 'px';
-// }
-
-// window.onscroll = paraTest;
-
-
-
-
-const paper = document.getElementsByClassName('paper');
-arrayPaper = paper.length -1;
-
-let hieghtNow = [];
-
-for(i = 0; i <= arrayPaper; i++){
-	hieghtNow.push(parseInt(window.getComputedStyle(paper[i], null).getPropertyValue('top')));
-}
-
-let para = () => {
-	let scroll = document.documentElement.scrollTop;
-	for(i = 0; i < 2; i++){
-	paper[i].style.top = parseInt(hieghtNow[i]) + scroll/5 + 'px';
-	}
-	for(i = 2; i <= arrayPaper; i++){
-	paper[i].style.top = parseInt(hieghtNow[i]) + scroll/7 + 'px';
-	}
-	console.log(scroll);
-}
-	
-
-
-
-
-
 //ヘッダーの高さを取得
 let headH = document.getElementById('header').offsetHeight;
 document.body.style.marginTop = 0 + "px";  //CSSの調整部分。

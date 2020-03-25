@@ -288,7 +288,7 @@ header {
     width: 140px;
     margin-left: 5%; }
     header #reservation p {
-      background-color: #fff;
+      background-color: #FFDE0B;
       text-align: center;
       padding: 12px; }
 
@@ -311,8 +311,11 @@ header {
     border: solid 1px #000;
     vertical-align: middle; }
     #firstview #frag img {
+      position: relative;
       width: 90%;
-      margin: 5% 5%; }
+      margin: 0 5% 0;
+      transform: translateY(-50%);
+      top: 50%; }
   #firstview .map_hokkaido_fv {
     width: 40%;
     height: 29.8vh;
@@ -357,12 +360,6 @@ header {
   #firstview .slide_fv_3 {
     display: none;
     background-image: url(../images/img_top_bg_03.jpg); }
-  #firstview .slide_fv_4 {
-    display: none;
-    background-image: url(../images/img_top_bg_04.jpg); }
-  #firstview .slide_fv_5 {
-    display: none;
-    background-image: url(../images/img_top_bg_05.jpg); }
   @media (max-width: 768px) {
     #firstview #frag {
       width: 70%; }
@@ -499,14 +496,6 @@ header {
         display: none;
         background-image: url(../images/img_gl_bg_03.jpg);
         z-index: 7; }
-      #sec_about #sec_gallery .img .slide_gl_4 {
-        display: none;
-        background-image: url(../images/img_gl_bg_04.jpg);
-        z-index: 9; }
-      #sec_about #sec_gallery .img .slide_gl_5 {
-        display: none;
-        background-image: url(../images/img_gl_bg_05.jpg);
-        z-index: 11; }
 
 /* layout - house*/
 #sec_house {
@@ -529,6 +518,7 @@ header {
     width: 50%;
     height: 400px;
     background-image: url(../images/img_house_bg_00.png);
+    background-size: cover;
     background-repeat: no-repeat;
     border: 1px solid #000;
     z-index: -1;
@@ -584,8 +574,10 @@ header {
         padding-top: 1%; }
       #sec_house #house_content_wrap .house_content .house_img {
         width: 40%;
+        height: 600px;
         margin: 4% 5% 4% 0;
-        float: left; }
+        float: left;
+        overflow: scroll; }
         #sec_house #house_content_wrap .house_content .house_img img {
           width: 100%;
           height: auto; }
@@ -650,7 +642,7 @@ header {
           margin-bottom: 12px; }
           #sec_house #house_content_wrap .house_content .button_reservation a + .reservation_direct {
             margin-top: 30px;
-            background-color: #D5E7E7;
+            background-color: #FFDE0B;
             color: #000; }
         #sec_house #house_content_wrap .house_content .button_reservation p {
           width: 72%;
@@ -813,7 +805,7 @@ footer {
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
-    font-size: 28px; }
+    font-size: 20px; }
     @media (max-width: 480px) {
       footer p {
         font-size: 14px;

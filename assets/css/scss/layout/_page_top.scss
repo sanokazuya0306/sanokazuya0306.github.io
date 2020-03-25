@@ -19,10 +19,13 @@
 			float: right;
 			background-color: #fff;
 			border: solid 1px #000;
-			vertical-align: middle;	
+			vertical-align: middle;
 			img{
+				position: relative;
 				width: 90%;
-				margin: 5% 5%;
+				margin: 0 5% 0;
+				transform: translateY(-50%);
+				top: 50%;
 			}
 		}
 		.map_hokkaido_fv{
@@ -76,14 +79,6 @@
 		.slide_fv_3{
 			display: none;
 			background-image: url(../images/img_top_bg_03.jpg);
-		}
-		.slide_fv_4{
-			display: none;
-			background-image: url(../images/img_top_bg_04.jpg);
-		}
-		.slide_fv_5{
-			display: none;
-			background-image: url(../images/img_top_bg_05.jpg);
 		}
 		@include tab{
 			#frag{
@@ -247,16 +242,6 @@
 					background-image: url(../images/img_gl_bg_03.jpg);
 					z-index: 7;
 				}
-				.slide_gl_4{
-					display: none;
-					background-image: url(../images/img_gl_bg_04.jpg);
-					z-index: 9;
-				}
-				.slide_gl_5{
-					display: none;
-					background-image: url(../images/img_gl_bg_05.jpg);
-					z-index: 11;
-				}
 			}
 		}
 	}
@@ -285,6 +270,7 @@
 			width: 50%;
 			height: 400px;
 			background-image: url(../images/img_house_bg_00.png);
+			background-size: cover;
 			background-repeat: no-repeat;
 			border: 1px solid #000;
 			z-index: -1;
@@ -330,7 +316,6 @@
 				margin: 0 20%;
 				font-size: 12px;
 			}
-
 		}
 
 		#house_content_wrap{
@@ -355,8 +340,10 @@
 				}
 				.house_img{
 					width: 40%;
+					height: 600px;
 					margin: 4% 5% 4% 0;
 					float: left;
+					overflow: scroll;
 					img{
 						width: 100%;
 						height: auto;
@@ -435,7 +422,7 @@
 					    margin-bottom: 12px;  
 						+ .reservation_direct{
 							margin-top: 30px;
-							background-color: #D5E7E7;
+							background-color: #FFDE0B;
 							color: #000;
 						}
 					}
@@ -646,7 +633,7 @@
 			top: 50%;
 			right: 5%;
 			transform: translateY(-50%);
-			font-size: 28px;
+			font-size: 20px;
 			@include sp{
 				font-size: 14px;
 				top: 20%;

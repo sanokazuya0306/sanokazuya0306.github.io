@@ -8,6 +8,7 @@ let currentGl = 0;
 const arrayGl = sliderImages_gl.length - 1;
 
 
+
 function slide_fv() {
 	if(currentFv < arrayFv){
 		sliderImages_fv[currentFv + 1].style.display = 'block';
@@ -25,9 +26,11 @@ function slide_gl_auto() {
 	if(currentGl < arrayGl){
 		sliderImages_gl[currentGl + 1].style.display = 'block';
 		sliderImages_gl[currentGl].style.display = 'none';
+		currentGl += 1;
 	} else if (currentGl = arrayGl){
 		sliderImages_gl[0].style.display = 'block';
 		sliderImages_gl[currentGl].style.display = 'none';
+		currentGl = 0;
 	}
 }
 

@@ -179,7 +179,6 @@ let touchMenu = () =>{
 }
 
 let allScroll = () => {
-	para();
 	tabMenu();
 }
 

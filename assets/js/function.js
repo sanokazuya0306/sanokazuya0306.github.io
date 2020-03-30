@@ -146,7 +146,7 @@ window.onload = function(){
 
 
 
-window.setTimeout("loading()", 3000);
+window.setTimeout("loading()", 0);
 
 
 document.addEventListener('DOMContentLoaded', pagenation(), false);

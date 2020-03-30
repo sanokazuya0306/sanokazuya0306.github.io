@@ -201,16 +201,16 @@ header {
       header nav #nav_icon .iconbar_top {
         width: 30px;
         height: 2px;
-        background-color: #fff;
+        background-color: #000;
         position: relative; }
       header nav #nav_icon .iconbar_middle {
         width: 30px;
         height: 2px;
-        background-color: #fff; }
+        background-color: #000; }
       header nav #nav_icon .iconbar_bottom {
         width: 30px;
         height: 2px;
-        background-color: #fff;
+        background-color: #000;
         position: relative; }
     header nav .show_icon {
       display: inline;
@@ -324,7 +324,8 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    z-index: -1; }
   #firstview .sitetitle {
     width: 60%;
     height: 29.8%;
@@ -339,8 +340,6 @@ header {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-    #firstview .sitetitle p {
-      padding-top: 20px; }
   #firstview .slide_fv {
     width: 60%;
     height: 70vh;
@@ -361,40 +360,39 @@ header {
     display: none;
     background-image: url(../images/img_top_bg_03.jpg); }
   @media (max-width: 768px) {
+    #firstview .menuspace_fv {
+      width: 13%;
+      height: 520px; }
     #firstview #frag {
+      width: 30%; }
+    #firstview .slide_fv {
       width: 70%; }
+    #firstview .sitetitle {
+      height: 29.7vh; }
+    #firstview .map_hokkaido_fv {
+      height: 29.7vh; } }
+  @media (max-width: 480px) {
+    #firstview .menuspace_fv {
+      display: none; }
+    #firstview #frag {
+      width: 60%;
+      height: 30%; }
       #firstview #frag img {
-        width: 100%;
-        margin: 66vh 0 0 55%;
+        width: 90%;
         transform: translateY(-50%); }
     #firstview .sitetitle {
-      position: absolute;
-      bottom: auto;
-      top: 20%;
-      right: 6%;
-      width: 30%;
-      z-index: -1; }
-      #firstview .sitetitle p {
-        line-height: 28px; } }
-  @media (max-width: 480px) {
-    #firstview {
-      height: 700px; }
-      #firstview #frag {
-        width: 100%; }
-        #firstview #frag img {
-          width: 100%;
-          margin: 50vh 0 0 30%;
-          transform: translateY(-50%); }
-      #firstview .sitetitle {
-        bottom: -3%;
-        top: 500px;
-        right: 12%;
-        width: 80%; }
-        #firstview .sitetitle p {
-          line-height: 24px; }
-      #firstview .slide_fv {
-        width: 100%;
-        height: 460px; } }
+      width: 103%;
+      height: 20%;
+      bottom: 20%;
+      right: -1%; }
+    #firstview .slide_fv {
+      width: 100%;
+      height: 70%; }
+    #firstview .map_hokkaido_fv {
+      width: 101%;
+      height: 30vh;
+      bottom: -9%;
+      left: -1%; } }
 
 /* layout - About　*/
 #sec_about {
@@ -423,35 +421,23 @@ header {
     #sec_about .text .detail {
       padding: 0 10% 10%; }
   @media (max-width: 768px) {
-    #sec_about {
-      background-position: 20%;
-      z-index: 99; }
-      #sec_about .text {
-        left: 20%;
-        top: 15%;
-        width: 80%;
-        height: auto;
-        background-color: #F7F7F7;
-        z-index: 99; } }
+    #sec_about .text {
+      left: 20%;
+      width: 80%; } }
   @media (max-width: 480px) {
-    #sec_about {
-      background-image: url(../images/img-05_sp.png);
-      background-position: left 30% top 0;
-      background-size: 150%;
-      height: 600px; }
-      #sec_about .text {
-        left: 5%;
-        top: 10%;
-        width: 100%; }
-        #sec_about .text h1 {
-          padding: 0 10%;
-          margin-bottom: 3%;
-          margin-bottom: 6%; }
-        #sec_about .text .detail {
-          padding: 0 10% 10%;
-          text-align: justify; }
-          #sec_about .text .detail br {
-            display: none; } }
+    #sec_about .text {
+      left: 5%;
+      top: 10%;
+      width: 100%; }
+      #sec_about .text h1 {
+        padding: 0 10%;
+        margin-bottom: 3%;
+        margin-bottom: 6%; }
+      #sec_about .text .detail {
+        padding: 0 10% 10%;
+        text-align: justify; }
+        #sec_about .text .detail br {
+          display: none; } }
   #sec_about #sec_gallery {
     position: relative;
     width: 60%;
@@ -460,10 +446,11 @@ header {
     border: solid 1px #000; }
     @media (max-width: 768px) {
       #sec_about #sec_gallery {
-        height: 70vh; } }
+        width: 80%;
+        height: auto; } }
     @media (max-width: 480px) {
       #sec_about #sec_gallery {
-        height: 50vh; } }
+        width: 100%; } }
     #sec_about #sec_gallery .img {
       width: 90%;
       height: 80%;
@@ -472,7 +459,7 @@ header {
       border: solid 1px #000; }
       @media (max-width: 768px) {
         #sec_about #sec_gallery .img {
-          height: 62vh; } }
+          height: 400px; } }
       @media (max-width: 480px) {
         #sec_about #sec_gallery .img {
           height: 44vh; } }
@@ -485,6 +472,11 @@ header {
         transform: translate(-50%, -50%);
         background-size: cover;
         background-position: center; }
+        @media (max-width: 768px) {
+          #sec_about #sec_gallery .img .slide_gl {
+            height: 89%;
+            top: 49%;
+            left: 51%; } }
       #sec_about #sec_gallery .img .slide_gl_1 {
         background-image: url(../images/img_gl_bg_01.jpg);
         z-index: 3; }
@@ -574,13 +566,14 @@ header {
         padding-top: 1%; }
       #sec_house #house_content_wrap .house_content .house_img {
         width: 40%;
-        height: 600px;
+        height: 540px;
         margin: 4% 5% 4% 0;
         float: left;
         overflow: scroll; }
         #sec_house #house_content_wrap .house_content .house_img img {
           width: 100%;
-          height: auto; }
+          height: auto;
+          margin-bottom: 20px; }
       #sec_house #house_content_wrap .house_content .house_info {
         display: inline-block;
         width: 50%; }
@@ -598,7 +591,7 @@ header {
           width: 100%;
           padding: 0 0 24px; }
           #sec_house #house_content_wrap .house_content .house_info .spec .spec_content {
-            width: 47%;
+            width: 46%;
             height: auto;
             padding: 2% 0 4%;
             display: inline-block;
@@ -650,101 +643,140 @@ header {
           line-height: 20px; }
   @media (max-width: 768px) {
     #sec_house {
-      background-size: 100% auto;
-      background-position: top 0 left -100px; }
+      height: 1800px; }
+      #sec_house .menuspace_house {
+        float: left;
+        width: 13%;
+        height: 2000px;
+        background-color: #fff;
+        border: 1px solid #000; }
+      #sec_house #house_wrap {
+        top: -2%; }
+      #sec_house #house_location_map {
+        left: -20%;
+        width: 90%; }
       #sec_house #house_nav {
         left: 62%;
+        top: -3%;
         width: 44%;
-        padding-bottom: 5%;
-        margin-top: 0%; }
+        padding-bottom: 5%; }
       #sec_house #house_content_wrap {
-        height: 200vh; }
+        height: 200vh;
+        top: 280px; }
         #sec_house #house_content_wrap .house_content {
           height: auto;
           padding-bottom: 5%;
           padding-right: 20%;
           background-color: #F7F7F7; }
           #sec_house #house_content_wrap .house_content .house_img {
-            width: 80%;
+            width: 100%;
+            height: auto;
             margin: 4% 5% 4% 0;
             float: none; }
-          #sec_house #house_content_wrap .house_content .house_subtitle {
-            font-size: 16px;
-            margin: 0 6% 0; }
-          #sec_house #house_content_wrap .house_content .house_title {
-            margin: 2% 5.4% 2%; }
-          #sec_house #house_content_wrap .house_content .detail {
-            padding: 0 6% 24px;
-            margin: 2% 0 5%;
-            width: 74%;
-            font-size: 14px;
-            line-height: 26px; }
-          #sec_house #house_content_wrap .house_content .spec {
-            width: 97%;
-            padding: 0 6% 24px; }
-            #sec_house #house_content_wrap .house_content .spec .spec_content {
-              width: 35%;
-              height: auto;
-              padding: 2% 0;
-              margin-right: 5%; }
-              #sec_house #house_content_wrap .house_content .spec .spec_content .spec_img {
-                width: 7%;
-                margin-right: 7%; }
-              #sec_house #house_content_wrap .house_content .spec .spec_content .spec_title {
-                font-size: 18px;
-                padding-bottom: -4px;
-                padding-left: 40px; }
-              #sec_house #house_content_wrap .house_content .spec .spec_content .spec_text {
-                font-size: 13px;
-                line-height: 20px;
-                margin: 6px 0 0 14%; }
+            #sec_house #house_content_wrap .house_content .house_img ul {
+              overflow-x: auto;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch; }
+              #sec_house #house_content_wrap .house_content .house_img ul li {
+                width: 60%;
+                display: inline-block; }
+          #sec_house #house_content_wrap .house_content .house_info {
+            width: 100%; }
+            #sec_house #house_content_wrap .house_content .house_info .house_subtitle {
+              font-size: 16px;
+              margin: 0 6% 0; }
+            #sec_house #house_content_wrap .house_content .house_info .house_title {
+              margin: 2% 5.4% 2%; }
+            #sec_house #house_content_wrap .house_content .house_info .detail {
+              padding: 0 6% 24px;
+              margin: 2% 0 5%;
+              width: 86%;
+              font-size: 14px;
+              line-height: 26px; }
+            #sec_house #house_content_wrap .house_content .house_info .spec {
+              width: 97%;
+              padding: 0 6% 24px; }
+              #sec_house #house_content_wrap .house_content .house_info .spec .spec_content {
+                width: 40%;
+                height: auto;
+                padding: 2% 0;
+                margin-right: 3%; }
+                #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_img {
+                  width: 7%;
+                  margin-right: 7%; }
+                #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_title {
+                  font-size: 18px;
+                  padding-bottom: -4px;
+                  padding-left: 40px; }
+                #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_text {
+                  font-size: 13px;
+                  line-height: 20px;
+                  margin: 6px 0 0 14%; }
           #sec_house #house_content_wrap .house_content .calender {
-            width: 72%;
+            width: 86%;
             height: 300px;
-            padding-left: 6%; }
+            padding: 2% 0 5% 6%; }
           #sec_house #house_content_wrap .house_content .button_reservation {
-            margin-left: 6%; } }
+            margin-left: 6%;
+            width: 84%;
+            height: auto; } }
   @media (max-width: 480px) {
     #sec_house {
-      background-size: 160% auto;
-      background-position: top 0 left -60px;
-      padding-top: 60%; }
+      height: 2100px; }
+      #sec_house .menuspace_house {
+        display: none; }
       #sec_house #house_nav {
         left: 20%;
         width: 90%;
-        margin-top: 30%; }
+        margin-top: 50%; }
         #sec_house #house_nav .accent_letter + .ver {
           float: left; }
+      #sec_house #house_wrap {
+        top: -2%;
+        width: 100%; }
+      #sec_house #house_location_map {
+        left: -10%;
+        width: 100%;
+        height: 247px; }
       #sec_house #house_content_wrap {
         height: 1700px;
+        top: 310px;
         left: 5%; }
         #sec_house #house_content_wrap .house_content {
           width: 100%; }
-          #sec_house #house_content_wrap .house_content .house_img {
-            width: 100%; }
-          #sec_house #house_content_wrap .house_content .house_subtitle {
+          #sec_house #house_content_wrap .house_content .house_img ul li {
+            width: auto;
+            height: 200px;
+            display: inline-block; }
+            #sec_house #house_content_wrap .house_content .house_img ul li img {
+              width: auto;
+              margin-bottom: 0;
+              height: 100%; }
+          #sec_house #house_content_wrap .house_content .house_info .house_subtitle {
             font-size: 14px;
             margin: 2% 6% 0; }
-          #sec_house #house_content_wrap .house_content .house_title {
+          #sec_house #house_content_wrap .house_content .house_info .house_title {
             font-size: 22px;
             margin: 4.8%; }
-          #sec_house #house_content_wrap .house_content .detail {
+          #sec_house #house_content_wrap .house_content .house_info .detail {
             padding: 0 6% 20px;
             width: 84%;
             font-size: 13px;
             line-height: 26px; }
-          #sec_house #house_content_wrap .house_content .spec .spec_content {
+          #sec_house #house_content_wrap .house_content .house_info .spec .spec_content {
             width: 86%;
             padding: 6% 0;
-            margin-right: 5%; }
-            #sec_house #house_content_wrap .house_content .spec .spec_content .spec_img {
+            margin-right: 0; }
+            #sec_house #house_content_wrap .house_content .house_info .spec .spec_content + .capacity, #sec_house #house_content_wrap .house_content .house_info .spec .spec_content + .facility {
+              margin-left: 0; }
+            #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_img {
               width: 5%;
               margin-right: 7%; }
-            #sec_house #house_content_wrap .house_content .spec .spec_content .spec_title {
+            #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_title {
               font-size: 18px;
               padding-bottom: -4px;
               padding-left: 34px; }
-            #sec_house #house_content_wrap .house_content .spec .spec_content .spec_text {
+            #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_text {
               font-size: 13px;
               line-height: 22px;
               margin: 6px 0 0 12%; }
@@ -752,15 +784,16 @@ header {
             width: 84%;
             height: 316px; }
           #sec_house #house_content_wrap .house_content .button_reservation {
-            width: 70%; }
+            width: 82%;
+            padding: 23px 20px; }
             #sec_house #house_content_wrap .house_content .button_reservation a {
-              float: left;
               font-size: 14px;
               width: 100%;
               height: 14px;
               margin-right: 2%;
-              margin-bottom: 4%;
-              text-align: center; } }
+              margin-bottom: 4%; }
+            #sec_house #house_content_wrap .house_content .button_reservation p {
+              width: 93%; } }
 
 /* layout - contact*/
 #sec_contact {

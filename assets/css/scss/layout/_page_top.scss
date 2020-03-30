@@ -37,6 +37,7 @@
 			background-repeat: no-repeat;
 			position: absolute;
 			bottom: 0;
+			z-index: -1;
 		}
 		.sitetitle{
 			width: 60%;
@@ -52,9 +53,6 @@
 			    top: 50%;
 			    left: 50%;
 			    transform: translate(-50%, -50%);
-			}
-			p{
-				padding-top: 20px;
 			}
 		}
 		.slide_fv{
@@ -81,48 +79,50 @@
 			background-image: url(../images/img_top_bg_03.jpg);
 		}
 		@include tab{
+			.menuspace_fv{
+				width: 13%;
+				height: 520px;
+			}
 			#frag{
+				width: 30%;
+			}
+			.slide_fv{
 				width: 70%;
-				img{
-					width: 100%;
-					margin: 66vh 0 0 55%;
-					transform: translateY(-50%);
-				}
 			}
 			.sitetitle{
-				position: absolute;
-				bottom: auto;
-				top: 20%;
-				right: 6%;
-				width: 30%;
-				z-index: -1;
-				p{
-					line-height: 28px;
-				}
+				height: 29.7vh;
+			}
+			.map_hokkaido_fv{
+				height: 29.7vh;
 			}
 		}
 		@include sp{
-			height: 700px;
+			.menuspace_fv{
+				display:none; 
+			}
 			#frag{
-				width: 100%;
+				width: 60%;
+				height: 30%;
 				img{
-					width: 100%;
-					margin: 50vh 0 0 30%;
+					width: 90%;
 					transform: translateY(-50%);
 				}
 			}
 			.sitetitle{
-				bottom: -3%;
-				top: 500px;
-				right: 12%;
-				width: 80%;
-				p{
-					line-height: 24px;
-				}
+				width: 103%;
+				height: 20%;
+				bottom: 20%;
+				right: -1%;
 			}
 			.slide_fv{
 				width: 100%;
-				height: 460px;
+				height: 70%;
+			}
+			.map_hokkaido_fv{
+				width: 101%;
+				height: 30vh;
+				bottom: -9%;
+				left: -1%;
 			}
 		}
 	}
@@ -160,22 +160,12 @@
 			}
 		}
 		@include tab{
-			background-position: 20%;
-			z-index: 99;
 			.text{
 				left: 20%;
-				top: 15%;
 				width: 80%;
-				height: auto;
-				background-color: #F7F7F7;
-				z-index: 99;
 			}
 		}
 		@include sp{
-			background-image: url(../images/img-05_sp.png);
-			background-position: left 30% top 0;
-			background-size: 150%;
-			height: 600px;
 			.text{
 				left: 5%;
 				top: 10%;
@@ -201,10 +191,11 @@
 			background-color: #ECECEC;
 			border: solid 1px #000;
 			@include tab{
-				height: 70vh;
+				width: 80%;
+				height: auto;
 			}
 			@include sp{
-				height: 50vh;
+				width: 100%;
 			}
 			.img{
 				width: 90%;
@@ -213,7 +204,7 @@
 				overflow: hidden;
 				border: solid 1px #000;
 				@include tab{
-					height: 62vh;
+					height: 400px;
 				}
 				@include sp{
 					height: 44vh;
@@ -227,6 +218,11 @@
 					transform: translate(-50%, -50%);			
 					background-size: cover;
 					background-position: center;
+					@include tab{
+						height: 89%;
+						top: 49%;
+						left: 51%;
+					}
 				}
 				.slide_gl_1{
 					background-image: url(../images/img_gl_bg_01.jpg);
@@ -340,13 +336,14 @@
 				}
 				.house_img{
 					width: 40%;
-					height: 600px;
+					height: 540px;
 					margin: 4% 5% 4% 0;
 					float: left;
 					overflow: scroll;
 					img{
 						width: 100%;
 						height: auto;
+						margin-bottom: 20px;
 					}
 				}
 				.house_info{
@@ -369,7 +366,7 @@
 						width: 100%;
 						padding: 0 0 24px;
 						.spec_content{
-							width: 47%;
+							width: 46%;
 	 						height: auto;
 						    padding: 2% 0 4%;
 						    display: inline-block;
@@ -435,129 +432,186 @@
 			}
 		}
 		@include tab{
-			background-size: 100% auto;
-			background-position: top 0 left -100px;
+			height: 1800px;
+			.menuspace_house{
+				float: left;
+				width: 13%;
+				height: 2000px;
+				background-color: #fff;
+				border: 1px solid #000;
+			}
+			#house_wrap{
+				top: -2%;
+			}
+			#house_location_map{
+				
+				left: -20%;
+				width: 90%;
+			}
 			#house_nav{
 				left: 62%;
+				top: -3%;
 				width: 44%;
 				padding-bottom: 5%;
-				margin-top: 0%;
 			}
 			#house_content_wrap{
 				height: 200vh;
+				top: 280px;
 				.house_content{
 					height: auto;
 					padding-bottom: 5%;
 					padding-right: 20%;
 					background-color: #F7F7F7;
 					.house_img{
-						width: 80%;
+						width: 100%;
+						height: auto;
 						margin: 4% 5% 4% 0;
 						float: none;
-					}
-					.house_subtitle{
-						font-size: 16px;
-						margin: 0 6% 0;
-					}
-					.house_title{
-						margin: 2% 5.4% 2%;
-					}
-					.detail{
-						padding: 0 6% 24px;
-						margin: 2% 0 5%;
-						width: 74%;
-						font-size: 14px;
-						line-height: 26px;
-					}
-					.spec{
-						width: 97%;
-					    padding: 0 6% 24px;
-						.spec_content{
-							width: 35%;
-	 						height: auto;
-						    padding: 2% 0;
-						    margin-right: 5%;
-							.spec_img{
-								width: 7%;
-								margin-right: 7%;
+						ul{							
+					    	overflow-x: auto;
+					    	white-space: nowrap;
+					    	-webkit-overflow-scrolling: touch;
+							li{
+								width: 60%;
+								display: inline-block;
 							}
-							.spec_title{
-								font-size: 18px;
-								padding-bottom: -4px;
-								padding-left: 40px;
-							}
-							.spec_text{
-								font-size: 13px;
-								line-height: 20px;
-								margin: 6px 0 0 14%;
+						}
+					}
+					.house_info{
+						width: 100%;
+						.house_subtitle{
+							font-size: 16px;
+							margin: 0 6% 0;
+						}
+						.house_title{
+							margin: 2% 5.4% 2%;
+						}
+						.detail{
+							padding: 0 6% 24px;
+							margin: 2% 0 5%;
+							width: 86%;
+							font-size: 14px;
+							line-height: 26px;
+						}
+						.spec{
+							width: 97%;
+						    padding: 0 6% 24px;
+							.spec_content{
+								width: 40%;
+		 						height: auto;
+							    padding: 2% 0;
+							    margin-right: 3%;
+								.spec_img{
+									width: 7%;
+									margin-right: 7%;
+								}
+								.spec_title{
+									font-size: 18px;
+									padding-bottom: -4px;
+									padding-left: 40px;
+								}
+								.spec_text{
+									font-size: 13px;
+									line-height: 20px;
+									margin: 6px 0 0 14%;
+								}
 							}
 						}
 					}
 					.calender{
-						width: 72%;
+						width: 86%;
 					    height: 300px;
-					    padding-left: 6%;
+					    padding: 2% 0 5% 6%;
 					}
 					.button_reservation{
 						margin-left: 6%;
+					    width: 84%;
+					    height: auto;
 					}
 				}
 			}
 		}
 		@include sp{
-			background-size: 160% auto;
-			background-position: top 0 left -60px;
-			padding-top: 60%;
+			height: 2100px;
+			.menuspace_house{
+				display: none;
+			}
 			#house_nav{
 				left: 20%;
 				width: 90%;
-				margin-top: 30%;
+				margin-top: 50%;
 				.accent_letter{
 					+ .ver{
 						float: left;
 					}
 				}
 			}
+			#house_wrap{
+				top: -2%;
+				width: 100%;
+			}
+			#house_location_map{	
+				left: -10%;
+			    width: 100%;
+			    height: 247px;
+			}
 			#house_content_wrap{
 				height: 1700px;
+				top: 310px;
 				left: 5%;
 				.house_content{
 					width: 100%;
 					.house_img{
-						width: 100%;
-					}
-					.house_subtitle{
-						font-size: 14px;
-						margin: 2% 6% 0;
-					}
-					.house_title{
-						font-size: 22px;
-						margin: 4.8%;
-					}
-					.detail{
-						padding: 0 6% 20px;
-						width: 84%;
-						font-size: 13px;
-						line-height: 26px;
-					}
-					.spec{
-						.spec_content{
-							width: 86%;
-						    padding: 6% 0;
-						    margin-right: 5%;
-							.spec_img{
-								width: 5%;
-								margin-right: 7%;
+						ul{							
+							li{
+								width: auto;
+   								height: 200px;
+								display: inline-block;
+								img{
+									    width: auto;
+									    margin-bottom: 0;
+									    height: 100%;
+								}
 							}
-							.spec_title{
-								font-size: 18px;
-								padding-bottom: -4px;
-								padding-left: 34px;
-							}
-							.spec_text{
-								font-size: 13px;
-								line-height: 22px;
-								margin: 6px 0 0 12%;
+						}
+					}
+					.house_info{
+						.house_subtitle{
+							font-size: 14px;
+							margin: 2% 6% 0;
+						}
+						.house_title{
+							font-size: 22px;
+							margin: 4.8%;
+						}
+						.detail{
+							padding: 0 6% 20px;
+							width: 84%;
+							font-size: 13px;
+							line-height: 26px;
+						}
+						.spec{
+							.spec_content{
+								width: 86%;
+							    padding: 6% 0;
+							    margin-right: 0;
+							    +.capacity, +.facility{
+								    margin-left: 0;
+							    }
+								.spec_img{
+									width: 5%;
+									margin-right: 7%;
+								}
+								.spec_title{
+									font-size: 18px;
+									padding-bottom: -4px;
+									padding-left: 34px;
+								}
+								.spec_text{
+									font-size: 13px;
+									line-height: 22px;
+									margin: 6px 0 0 12%;
+								}
 							}
 						}
 					}
@@ -566,15 +620,17 @@
     					height: 316px;
 					}
 					.button_reservation{
-						width: 70%;
+						width: 82%;
+					    padding: 23px 20px;
 						a{
-							float: left;
 							font-size: 14px;
 							width: 100%;
 							height: 14px;
 						    margin-right: 2%;
 						    margin-bottom: 4%;
-						    text-align: center;
+						}
+						p{
+							width: 93%;
 						}
 					}
 				}

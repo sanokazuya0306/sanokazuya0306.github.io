@@ -58,7 +58,7 @@ body {
     @media (max-width: 480px) {
       body p {
         font-size: 14px;
-        line-height: 28px; } }
+        line-height: 26px; } }
   body .jp {
     display: inline; }
   body .en {
@@ -376,23 +376,25 @@ header {
       display: none; }
     #firstview #frag {
       width: 60%;
-      height: 30%; }
+      height: 30%;
+      margin-top: 75%; }
       #firstview #frag img {
         width: 90%;
         transform: translateY(-50%); }
     #firstview .sitetitle {
       width: 103%;
-      height: 20%;
-      bottom: 20%;
+      height: 14%;
+      bottom: -2;
       right: -1%; }
     #firstview .slide_fv {
       width: 100%;
-      height: 70%; }
+      height: 65%; }
     #firstview .map_hokkaido_fv {
       width: 101%;
       height: 30vh;
-      bottom: -9%;
-      left: -1%; } }
+      left: -1%;
+      bottom: 7%;
+      z-index: -4; } }
 
 /* layout - About　*/
 #sec_about {
@@ -427,7 +429,8 @@ header {
   @media (max-width: 480px) {
     #sec_about .text {
       left: 5%;
-      top: 10%;
+      top: 0;
+      margin-top: -5%;
       width: 100%; }
       #sec_about .text h1 {
         padding: 0 10%;
@@ -762,7 +765,7 @@ header {
             padding: 0 6% 20px;
             width: 84%;
             font-size: 13px;
-            line-height: 26px; }
+            line-height: 22px; }
           #sec_house #house_content_wrap .house_content .house_info .spec .spec_content {
             width: 86%;
             padding: 6% 0;
@@ -778,7 +781,7 @@ header {
               padding-left: 34px; }
             #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_text {
               font-size: 13px;
-              line-height: 22px;
+              line-height: 20px;
               margin: 6px 0 0 12%; }
           #sec_house #house_content_wrap .house_content .calender {
             width: 84%;
@@ -832,7 +835,7 @@ footer {
   position: relative; }
   @media (max-width: 480px) {
     footer {
-      height: 13vh; } }
+      height: 6vh; } }
   footer p {
     position: absolute;
     top: 50%;
@@ -841,10 +844,8 @@ footer {
     font-size: 20px; }
     @media (max-width: 480px) {
       footer p {
-        font-size: 14px;
-        top: 20%;
-        right: auto;
-        left: 5%;
+        font-size: 12px;
+        top: 50%;
         transform: translateY(-50%); } }
 
 /*# sourceMappingURL=main.css.map */

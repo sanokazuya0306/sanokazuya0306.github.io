@@ -103,14 +103,16 @@
 			#frag{
 				width: 60%;
 				height: 30%;
-				margin-top: 75%;
+				margin-top: 77%;
+				background-color: transparent;
+				border: none;
 				img{
 					width: 90%;
 					transform: translateY(-50%);
 				}
 			}
 			.sitetitle{
-				width: 103%;
+				width: 100%;
 				height: 14%;
 				bottom: -2;
 				right: -1%;
@@ -123,8 +125,9 @@
 				width: 101%;
 				height: 30vh;
 				left: -1%;
-				bottom: 7%;
+				top: 64%;
 				z-index: -4;
+				background-position: top;
 			}
 		}
 	}
@@ -352,15 +355,27 @@
 				.house_info{
 					display: inline-block;
 					width: 50%;
-					.house_subtitle{
-						font-size: 18px;
-						margin: 4% 0 1%;
-					}
-					.house_title{
-						font-size: 30px;
-						margin: 4% 0 3%;
+					.title_area{
+						height: 60px;
+						margin: 4% 0 7%;
+						.left_column{
+							float: left;
+							.house_subtitle{
+								font-size: 18px;
+								margin-bottom: 14px;
+							}
+							.house_title{
+								font-size: 30px;
+							}
+						}
+						.house_logo{
+							width: 140px;
+							margin-top: 10px;
+							float: right;
+						}
 					}
 					.detail{
+						clear: both;
 						padding: 0 0 48px;
 						text-align: justify;
 					}
@@ -467,27 +482,29 @@
 					background-color: #F7F7F7;
 					.house_img{
 						width: 100%;
-						height: auto;
+						height: 200px;
 						margin: 4% 5% 4% 0;
 						float: none;
-						ul{							
+						ul{			
+							height: 200px;				
 					    	overflow-x: auto;
 					    	white-space: nowrap;
-					    	-webkit-overflow-scrolling: touch;
 							li{
-								width: 60%;
+								width: auto;
+								height: 200px;
 								display: inline-block;
+								img{
+									    width: auto;
+									    margin-bottom: 0;
+									    height: 100%;
+								}
 							}
 						}
 					}
 					.house_info{
 						width: 100%;
-						.house_subtitle{
-							font-size: 16px;
-							margin: 0 6% 0;
-						}
-						.house_title{
-							margin: 2% 5.4% 2%;
+						.title_area{
+							margin: 4% 10% 7% 5%;
 						}
 						.detail{
 							padding: 0 6% 24px;
@@ -535,7 +552,7 @@
 			}
 		}
 		@include sp{
-			height: 2100px;
+			height: 2200px;
 			.menuspace_house{
 				display: none;
 			}
@@ -559,33 +576,28 @@
 			    height: 247px;
 			}
 			#house_content_wrap{
-				height: 1700px;
+				height: 1800px;
 				top: 310px;
-				left: 5%;
+				left: 3%;
 				.house_content{
 					width: 100%;
-					.house_img{
-						ul{							
-							li{
-								width: auto;
-   								height: 200px;
-								display: inline-block;
-								img{
-									    width: auto;
-									    margin-bottom: 0;
-									    height: 100%;
+					.house_info{
+						.title_area{
+							height: 50px;
+							.left_column{
+								.house_subtitle{
+									font-size: 14px;
+									margin-bottom: 12px;
+								}
+								.house_title{
+									font-size: 24px;
 								}
 							}
-						}
-					}
-					.house_info{
-						.house_subtitle{
-							font-size: 14px;
-							margin: 2% 6% 0;
-						}
-						.house_title{
-							font-size: 22px;
-							margin: 4.8%;
+							.house_logo{
+								width: 100px;
+								margin-top: 10px;
+								float: right;
+							}
 						}
 						.detail{
 							padding: 0 6% 20px;
@@ -618,9 +630,15 @@
 							}
 						}
 					}
-					.calender{
-						width: 84%;
-    					height: 316px;
+					.calender_wrap{
+						height: 100%;
+						width: 20%;
+						.calender{
+							width: 100%;
+	    					height: 316px;
+						    padding: 2% 0 5% 0;
+						    overflow: hidden;
+						}
 					}
 					.button_reservation{
 						width: 82%;
@@ -660,10 +678,30 @@
 					position: absolute;
 					top: 50%;
 					left: 50%;
-					transform: translate(-50%, -50%);
+					transform: translate(0%, -50%);
 					font-size: 60px;
 					@include sp{
 						font-size: 30px;
+						transform: translate(-50%, -50%);
+					}
+				}
+				.contact_text{
+					border: 1px solid #000;
+					padding: 20px;
+					border-radius: 20px;
+					font-size: 20px;
+					left: 20%;
+					transform: translate(0%, -50%);
+					@include tab{
+						font-size: 16px;
+						left: 10%;
+					}
+					@include sp{
+						font-size: 14px;
+						line-height: 24px;
+						left: 20%;
+						transform: translate(-20%, -150%);
+						background-color: #fff;
 					}
 				}
 			}

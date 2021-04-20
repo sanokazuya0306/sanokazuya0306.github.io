@@ -295,7 +295,8 @@ header {
 /* layout - ファーストビュー　*/
 #firstview {
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
   #firstview .menuspace_fv {
     display: block;
     float: left;
@@ -761,47 +762,46 @@ header {
         left: 3%; }
         #sec_house #house_content_wrap .house_content {
           width: 100%; }
-          #sec_house #house_content_wrap .house_content .house_info .title_area {
-            height: 50px; }
-            #sec_house #house_content_wrap .house_content .house_info .title_area .left_column .house_subtitle {
-              font-size: 14px;
-              margin-bottom: 12px; }
-            #sec_house #house_content_wrap .house_content .house_info .title_area .left_column .house_title {
-              font-size: 24px; }
-            #sec_house #house_content_wrap .house_content .house_info .title_area .house_logo {
-              width: 100px;
-              margin-top: 10px;
-              float: right; }
-          #sec_house #house_content_wrap .house_content .house_info .detail {
-            padding: 0 6% 20px;
-            width: 84%;
-            font-size: 13px;
-            line-height: 22px; }
-          #sec_house #house_content_wrap .house_content .house_info .spec .spec_content {
-            width: 86%;
-            padding: 6% 0;
-            margin-right: 0; }
-            #sec_house #house_content_wrap .house_content .house_info .spec .spec_content + .capacity, #sec_house #house_content_wrap .house_content .house_info .spec .spec_content + .facility {
-              margin-left: 0; }
-            #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_img {
-              width: 5%;
-              margin-right: 7%; }
-            #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_title {
-              font-size: 18px;
-              padding-bottom: -4px;
-              padding-left: 34px; }
-            #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_text {
+          #sec_house #house_content_wrap .house_content .house_info {
+            width: 100%; }
+            #sec_house #house_content_wrap .house_content .house_info .title_area {
+              height: 50px; }
+              #sec_house #house_content_wrap .house_content .house_info .title_area .left_column .house_subtitle {
+                font-size: 14px;
+                margin-bottom: 12px; }
+              #sec_house #house_content_wrap .house_content .house_info .title_area .left_column .house_title {
+                font-size: 24px; }
+              #sec_house #house_content_wrap .house_content .house_info .title_area .house_logo {
+                width: 100px;
+                margin-top: 10px;
+                float: right; }
+            #sec_house #house_content_wrap .house_content .house_info .detail {
+              padding: 0 6% 20px;
+              width: 84%;
               font-size: 13px;
-              line-height: 20px;
-              margin: 6px 0 0 12%; }
-          #sec_house #house_content_wrap .house_content .calender_wrap {
-            height: 100%;
-            width: 20%; }
-            #sec_house #house_content_wrap .house_content .calender_wrap .calender {
-              width: 100%;
-              height: 316px;
-              padding: 2% 0 5% 0;
-              overflow: hidden; }
+              line-height: 22px; }
+            #sec_house #house_content_wrap .house_content .house_info .spec .spec_content {
+              width: 86%;
+              padding: 6% 0;
+              margin-right: 0; }
+              #sec_house #house_content_wrap .house_content .house_info .spec .spec_content + .capacity, #sec_house #house_content_wrap .house_content .house_info .spec .spec_content + .facility {
+                margin-left: 0; }
+              #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_img {
+                width: 5%;
+                margin-right: 7%; }
+              #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_title {
+                font-size: 18px;
+                padding-bottom: -4px;
+                padding-left: 34px; }
+              #sec_house #house_content_wrap .house_content .house_info .spec .spec_content .spec_text {
+                font-size: 13px;
+                line-height: 20px;
+                margin: 6px 0 0 12%; }
+          #sec_house #house_content_wrap .house_content .calender {
+            width: 90%;
+            height: 316px;
+            padding: 2% 0 5% 0;
+            overflow: scroll; }
           #sec_house #house_content_wrap .house_content .button_reservation {
             width: 82%;
             padding: 23px 20px; }

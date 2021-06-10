@@ -291,6 +291,14 @@ header {
       background-color: #FFDE0B;
       text-align: center;
       padding: 12px; }
+    header #reservation img {
+      height: 56px;
+      position: absolute;
+      bottom: 0;
+      left: 106%; }
+      @media (max-width: 480px) {
+        header #reservation img {
+          height: 50px; } }
 
 /* layout - ファーストビュー　*/
 #firstview {
@@ -644,19 +652,23 @@ header {
         margin-left: 3%;
         padding: 40px 30px;
         text-align: left; }
+        #sec_house #house_content_wrap .house_content .button_reservation .reservation_direct {
+          margin-top: 0px;
+          background-color: #FFDE0B;
+          color: #000; }
         #sec_house #house_content_wrap .house_content .button_reservation a {
           width: 54%;
           height: 20px;
           display: inline-block;
           margin-bottom: 12px; }
-          #sec_house #house_content_wrap .house_content .button_reservation a + .reservation_direct {
-            margin-top: 30px;
-            background-color: #FFDE0B;
-            color: #000; }
         #sec_house #house_content_wrap .house_content .button_reservation p {
-          width: 72%;
-          font-size: 12px;
+          margin-top: 20px;
+          margin-bottom: 4px;
+          width: 66%;
+          font-size: 11px;
           line-height: 20px; }
+        #sec_house #house_content_wrap .house_content .button_reservation img {
+          width: 66%; }
   @media (max-width: 768px) {
     #sec_house {
       height: 1800px; }
@@ -737,7 +749,11 @@ header {
           #sec_house #house_content_wrap .house_content .button_reservation {
             margin-left: 6%;
             width: 84%;
-            height: auto; } }
+            height: auto; }
+            #sec_house #house_content_wrap .house_content .button_reservation p {
+              width: 64%; }
+            #sec_house #house_content_wrap .house_content .button_reservation img {
+              width: 64%; } }
   @media (max-width: 480px) {
     #sec_house {
       height: 2200px; }
@@ -812,6 +828,8 @@ header {
               margin-right: 2%;
               margin-bottom: 4%; }
             #sec_house #house_content_wrap .house_content .button_reservation p {
+              width: 93%; }
+            #sec_house #house_content_wrap .house_content .button_reservation img {
               width: 93%; } }
 
 /* layout - contact*/

@@ -229,7 +229,16 @@
 			p{
 				background-color: #FFDE0B;
 				text-align: center;
-				padding: 12px; 
+				padding: 12px;
+			}
+			img{
+				height: 56px;
+				position: absolute;
+				bottom: 0;
+				left: 106%;
+				@include sp{
+					height: 50px;
+				}
 			}
 		}
 		

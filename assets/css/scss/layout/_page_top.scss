@@ -431,21 +431,27 @@
 				    margin-left: 3%;
 				    padding: 40px 30px;
 				    text-align: left;
+					
+					.reservation_direct{
+						margin-top: 0px;
+						background-color: #FFDE0B;
+						color: #000;
+					}
 					a{
 						width: 54%;
 						height: 20px;
 					    display: inline-block;
 					    margin-bottom: 12px;  
-						+ .reservation_direct{
-							margin-top: 30px;
-							background-color: #FFDE0B;
-							color: #000;
-						}
 					}
 					p{
-						width: 72%;
-						font-size: 12px;
+						margin-top: 20px;
+						margin-bottom: 4px;
+						width: 66%;
+						font-size: 11px;
 						line-height: 20px;
+					}
+					img{
+						width: 66%;
 					}
 				}
 			}
@@ -548,6 +554,12 @@
 						margin-left: 6%;
 					    width: 84%;
 					    height: auto;
+					    p{
+					    	width: 64%;
+					    }
+					    img{
+							width: 64%;
+						}
 					}
 				}
 			}
@@ -649,6 +661,9 @@
 						    margin-bottom: 4%;
 						}
 						p{
+							width: 93%;
+						}
+						img{
 							width: 93%;
 						}
 					}

@@ -1,0 +1,247 @@
+  
+
+	/* layout - header */
+
+
+	header{
+		position: fixed;
+		width: 25%;
+		height: 0;
+		z-index: 900;
+		#header_logo{
+			height: 6vw;
+			width: 20vw;
+			#header_symbol{
+				position: relative;
+				top: 3vw;
+			    left: 7vw;
+			    transform: translate(-50%, -50%);
+			    width: 3vw;
+				transition: 0.3s;
+				z-index: 901;
+			}
+			#header_logotype{
+				position: relative;
+				width: 8vw;
+				top: 0.2vw;
+   				left: 6vw;
+				transition: 0.4s;
+				z-index: 901;
+			}
+			#header_bg_blue{
+				position: fixed;
+				top: 0;
+				left: 3vw;
+				height: 3vw;
+				width: 8vw;
+				background-color: #D5E7E7;
+				transition: 0.6s;
+				z-index: -1;
+			}
+			#header_bg_white{
+				position: fixed;
+				top: 3vw;
+				left: 3vw;
+				height: 3vw;
+				width: 8vw;
+				background-color: #fff;
+				transition: 0.6s;
+				z-index: -1;
+			}
+			@include tab{
+				height: 12vw;
+				width: 20vw;
+				margin-bottom: 8vw;
+				#header_symbol{
+					top: 6vw;
+				    left: 13vw;
+				    width: 6vw;
+				}
+				#header_logotype{
+					width: 18vw;
+					top: -2vw;
+	   				left: 18vw;
+				}
+				#header_bg_blue{
+					left: 4vw;
+					height: 6vw;
+					width: 18vw;
+				}
+				#header_bg_white{
+					top: 6vw;
+					left: 4vw;
+					height: 6vw;
+					width: 18vw;
+				}
+			}
+			@include sp{
+				height: 20vw;
+				width: 20vw;
+				margin-bottom: 8vw;
+				#header_symbol{
+					top: 12vw;
+				    left: 13vw;
+				    width: 12vw;
+				}
+				#header_logotype{
+					width: 31vw;
+				    top: -4.5vw;
+				    left: 22vw;
+				}
+				#header_bg_blue{
+					display: none;
+				}
+				#header_bg_white{
+					display: none;
+				}
+			}
+		}
+		nav {
+			#nav_icon{
+				width: 30px;
+				height: 120px;
+				margin-bottom: 8%;
+				div{
+					margin-bottom: 12px;
+					transition: 0.5s;
+				}
+				.iconbar_top{
+					width: 30px;
+					height: 2px;
+					background-color: #000;
+					position: relative;
+				}
+				.iconbar_middle{
+					width: 30px;
+					height: 2px;
+					background-color: #000;
+				}
+				.iconbar_bottom{
+					width: 30px;
+					height: 2px;
+					background-color: #000;
+					position: relative;
+				}
+			}
+			.show_icon{
+				display: inline;
+				visibility: visible;
+				opacity: 100;
+			}
+			.hidden_icon{
+				display: none;
+				visibility: hidden;
+				opacity: 0;
+			}
+
+			margin-left: 20%;
+			margin-bottom: 18%;
+			ul{
+				padding-top: 50px; 
+				margin-bottom: 4%;
+				.nav_content{
+					position: relative;
+					top: 0;
+					margin-bottom: 20px;
+					font-size: 24px;
+					a{
+						color: #fff;
+					}
+				}
+				.show{
+					visibility: visible;
+					opacity: 100;
+					transition: 0.5s;
+				}
+				.hidden{
+					visibility: hidden;
+					opacity: 0;
+					margin-bottom: 12px;
+					transition: 0.8s;
+				}
+			}
+			@include sp{
+
+				#nav_icon{
+					margin-bottom: 6%;
+				}
+				margin-left: 32%;
+				margin-bottom: 50%;
+				ul{
+					padding-top: 50px; 
+					.nav_content{
+						margin-bottom: 14px;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		#translate{
+			ul{
+				li{
+					background-color: #fff;
+					width: 20%;
+					padding: 8px;
+					margin-bottom: 12px;
+					padding-left: 20%;
+					text-align: right;
+					font-size: 14px;
+					cursor: pointer;
+				}
+				.active_tra{
+					width: 28%;
+					background-color: #D5E7E7;
+				}
+				.show{
+					position: relative;
+					left: 0;
+					transition: 0.5s;
+				}
+				.hidden{
+					position: relative;
+					left: -100%;
+					transition: 0.8s;
+				}
+
+			}
+			@include tab{
+				margin-top: 6%;
+			}
+			@include sp{
+				margin-top: 10%;
+				ul{
+					li{
+						width: 60%;
+						padding: 6px;
+						font-size: 12px;
+					}
+					.active_tra{
+						width: 68%;
+					}
+				}
+			}
+		}
+		#reservation{
+			position: fixed;
+			bottom: 0px;
+			width: 140px;
+			margin-left: 5%;
+			p{
+				background-color: #FFDE0B;
+				text-align: center;
+				padding: 12px;
+			}
+			img{
+				height: 56px;
+				position: absolute;
+				bottom: 0;
+				left: 106%;
+				@include sp{
+					height: 50px;
+				}
+			}
+		}
+		
+	}
+
+

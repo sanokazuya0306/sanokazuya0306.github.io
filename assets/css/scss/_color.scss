@@ -1,0 +1,24 @@
+
+	/* color */
+
+
+	$orange: #EDAF33;
+	$text_orange: #DD5A12;
+	$lightgreen: #93BE40;
+	$text_lightgreen: #93BE40;
+	
+	.orange{
+		background-color: $orange;
+	}
+
+	.text_orange{
+		color: $text_orange;
+	}
+
+	.lightgreen{
+		background-color: $lightgreen;
+	}
+
+	.text_lightgreen{
+		color: $text_lightgreen;
+	}

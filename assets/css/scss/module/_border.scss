@@ -1,0 +1,20 @@
+
+	/* border */
+
+
+	$border_basic: #000 3px solid; 
+	$border_bold: #000 4px solid;
+	$border_bot: #DD5A12  6px dotted;
+
+	$border_radius: 10px;
+
+	.border_bottom{
+		@include buttonheight(0.3);
+		background-color: #000;
+		@include tab{
+			@include buttonheight(0.6);
+		}
+		@include sp{
+			@include buttonheight(1);
+		}
+	}

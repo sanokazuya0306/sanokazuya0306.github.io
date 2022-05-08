@@ -581,14 +581,33 @@ header {
         padding-top: 1%; }
       #sec_house #house_content_wrap .house_content .house_img {
         width: 40%;
-        height: 540px;
-        margin: 4% 5% 4% 0;
-        float: left;
-        overflow: scroll; }
-        #sec_house #house_content_wrap .house_content .house_img img {
-          width: 100%;
-          height: auto;
-          margin-bottom: 20px; }
+        display: inline-block; }
+        #sec_house #house_content_wrap .house_content .house_img .show {
+          width: 90%;
+          height: 27vw;
+          margin-top: 1vw;
+          object-fit: contain; }
+          @media (max-width: 768px) {
+            #sec_house #house_content_wrap .house_content .house_img .show {
+              height: 60vw; } }
+        #sec_house #house_content_wrap .house_content .house_img .thumbnail {
+          width: 90%;
+          display: flex;
+          flex-wrap: wrap; }
+          @media (max-width: 768px) {
+            #sec_house #house_content_wrap .house_content .house_img .thumbnail {
+              align-content: flex-start;
+              height: auto; } }
+          #sec_house #house_content_wrap .house_content .house_img .thumbnail li {
+            width: 12.5%;
+            height: 3vw; }
+            @media (max-width: 768px) {
+              #sec_house #house_content_wrap .house_content .house_img .thumbnail li {
+                height: 8vw; } }
+            #sec_house #house_content_wrap .house_content .house_img .thumbnail li img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; }
       #sec_house #house_content_wrap .house_content .house_info {
         display: inline-block;
         width: 50%; }
@@ -698,7 +717,7 @@ header {
           background-color: #F7F7F7; }
           #sec_house #house_content_wrap .house_content .house_img {
             width: 100%;
-            height: 200px;
+            height: auto;
             margin: 4% 5% 4% 0;
             float: none; }
             #sec_house #house_content_wrap .house_content .house_img ul {

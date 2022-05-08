@@ -144,8 +144,6 @@ window.onload = function(){
     }
 }
 
-
-
 window.setTimeout("loading()", 0);
 
 
@@ -155,3 +153,24 @@ document.addEventListener('DOMContentLoaded', translateSwitch(), false);
 
 headerLogo.addEventListener('mouseover', logoHoverOver);
 headerLogo.addEventListener('mouseleave', logoHoverLeave);
+
+
+const thumbskiyosato = document.querySelectorAll('.thumb_kiyosato');
+const thumbsshari = document.querySelectorAll('.thumb_shari');
+const thumbssattsuru = document.querySelectorAll('.thumb_sattsuru');
+
+thumbskiyosato.forEach(function(item,index){
+  item.onclick = function(){
+    document.getElementById('show_kiyosato').src = this.src;
+  }
+});
+thumbsshari.forEach(function(item,index){
+  item.onclick = function(){
+    document.getElementById('show_shari').src = this.src;
+  }
+});
+thumbssattsuru.forEach(function(item,index){
+  item.onclick = function(){
+    document.getElementById('show_sattsuru').src = this.src;
+  }
+});
